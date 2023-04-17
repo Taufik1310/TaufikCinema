@@ -1,0 +1,9 @@
+::-webkit-scrollbar {
+    background: transparent;
+    height: 10px;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #198754;
+}
