@@ -1,24 +1,12 @@
-#root {
-  padding: 0;
-  margin: 0;
+::-webkit-scrollbar {
+  background: transparent;
+  height: 10px;
 }
 
-.App {
-  text-align: center;
+::-webkit-scrollbar-thumb {
+  background: #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#content::-webkit-scrollbar {
+  display: none;
 }
-
-.App-link {
-  color: #61dafb;
-}
-

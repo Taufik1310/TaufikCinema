@@ -4,7 +4,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Navigation from '../components/Template/Navigation';
 import ScrollToTop from '../components/Template/ScrollToTop';
 import Header from '../components/Template/Header';
-import '../css/scrollbar.css';
 
 const Main = (props) => (
   <HelmetProvider>
@@ -18,7 +17,7 @@ const Main = (props) => (
         <Col lg="2" md="3" className='bg-transparent p-0'>
           <Navigation display="none"/>
         </Col>
-        <Col lg="10" md="9" className='bg-dark p-0' style={{ maxHeight: '100vh', overflowY: 'scroll' }}>
+        <Col lg="10" md="9" className='bg-dark p-0' style={{ maxHeight: '100vh', overflowY: 'scroll' }} id='content'>
             <Container fluid className="px-md-0 position-relative vh-100 w-100">
               <Header />
                 {props.children}

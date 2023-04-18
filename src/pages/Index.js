@@ -9,13 +9,13 @@ const Index = () => {
     return (
         <Main>
             <Container fluid style={{ marginTop: '80px' }}>
-                <section className='text-light mb-3'>
+                <section className='text-light mb-5 mt-2'>
                     <Trending />
                 </section>
-                <section className='text-light mb-3'>
+                <section className='text-light mb-5 mt-2'>
                     <Popular />
                 </section>
-                <section className='text-light mb-3'>
+                <section className='text-light mb-5 mt-2'>
                     <TopRated />
                 </section>
             </Container>

@@ -76,8 +76,8 @@ const Discover = ({ title, media, name }) => {
         <Main title={title}>
             <Container fluid style={{ marginTop: '80px' }} className="px-4">
                 <Row>
-                    <Col lg="5">
-                        <h3 className="text-light">{title}</h3>
+                    <Col lg="3" md='4' sm='5'>
+                        <h4 className="text-light">{title}</h4>
                         <ListGroup className="mt-3">
                             <ListGroup.Item 
                                 action
@@ -96,10 +96,12 @@ const Discover = ({ title, media, name }) => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="mt-3 d-flex justify-content-around align-items-start gap-2 flex-wrap text-light">
+                    <Col className="mt-3 d-flex justify-content-around align-items-start flex-wrap gap-2 text-light">
                             {
                                 sortedResult.map((item) => (
-                                    <MyCard item={item} media={media}/>
+                                    <div className="col-10 col-sm-5 col-md-3 col-lg-2 mb-3">
+                                        <MyCard item={item} media={media}/>
+                                    </div>
                                 ))
                             }
                     </Col>

@@ -3,6 +3,7 @@ import Index from "./pages/Index";
 import Detail from "./pages/Detail";
 import Search from "./pages/Search";
 import Discover from "./pages/Discover";
+import './App.css'
 
 const App = () => {
   return (

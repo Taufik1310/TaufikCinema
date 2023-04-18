@@ -7,14 +7,40 @@ const BASEIMGURL = process.env.REACT_APP_BASEIMGURL
 
 const MyCard = ({ item, media  }) => {
     return (
-        <Card style={{ minWidth: 180, maxWidth: 180, maxHeight:500 }} className="bg-transparent border-0 position-relative">
-            <Image src={(item.profile_path  === null ) || (item.poster_path  === null ) ? TMDBLogo : `${BASEIMGURL}/${media === "person" ? item.profile_path : item.poster_path}`}  width={180} height={280} className="rounded"/>
-            <Card.Body className="p-2">
-                <Card.Subtitle className="text-success fw-semibold" style={{ fontSize: "14px" }}>{media === "person" ? "" : `${item.vote_average}%`}</Card.Subtitle>
-                <Card.Title className="fs-6">{media === "movie" ? item.title : item.name}</Card.Title>
-                <Card.Subtitle className="text-light text-opacity-50">{media === "tv" ? item.first_air_date : item.release_date}</Card.Subtitle>
+        <Card 
+            className="bg-transparent border-0"
+        >
+            <Image 
+                src={(item.profile_path  === null ) || (item.poster_path  === null ) ? TMDBLogo : `${BASEIMGURL}/${media === "person" ? item.profile_path : item.poster_path}`}  
+                height={240} 
+                className="rounded" 
+                style={{ objectFit: 'cover' }}
+            />
+            <Card.Body 
+                className="p-2"
+            >
+                <Card.Subtitle 
+                    className="text-success fw-semibold" 
+                    style={{ fontSize: '12px'}}
+                >
+                    {media === "person" ? "" : `${item.vote_average}%`}
+                </Card.Subtitle>
+                <Card.Title 
+                    style={{ fontSize: '14px' }}
+                >
+                    {media === "movie" ? item.title : item.name}
+                </Card.Title>
+                <Card.Subtitle 
+                    className="text-light text-opacity-50" 
+                    style={{ fontSize: '13px' }}
+                >
+                    {media === "tv" ? item.first_air_date : item.release_date}
+                </Card.Subtitle>
             </Card.Body>
-            <Link to={`/detail/${media}/${item.id}`} className="position-absolute top-0 bottom-0 start-0 end-0"/>
+            <Link 
+                to={`/detail/${media}/${item.id}`} 
+                className="position-absolute top-0 bottom-0 start-0 end-0"
+            />
         </Card>
     )
 }

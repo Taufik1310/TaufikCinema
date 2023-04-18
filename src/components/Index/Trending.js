@@ -17,10 +17,10 @@ const Trending = () => {
         <Container fluid>
             <Row className='d-flex align-items-center mb-4'>
                 <Col className='d-flex gap-4'>
-                    <h4>Trending</h4>
+                    <h5>Trending</h5>
                     <ButtonGroup className='border border-success rounded-pill' size='sm'>
-                        <Button variant={time === "day" ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setTime("day")}>Today</Button>
-                        <Button variant={time === "week" ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setTime("week")}>This Week</Button>
+                        <Button variant={time === "day" ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setTime("day")} style={{ fontSize: '12px' }}>Today</Button>
+                        <Button variant={time === "week" ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setTime("week")} style={{ fontSize: '12px' }}>This Week</Button>
                     </ButtonGroup>
                 </Col>
             </Row>

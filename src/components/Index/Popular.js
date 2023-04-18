@@ -17,11 +17,11 @@ const Popular = () => {
         <Container fluid>
             <Row className='d-flex align-items-center mb-4'>
                 <Col className='d-flex gap-4'>
-                    <h4>Popular</h4>
+                    <h5>Popular</h5>
                     <ButtonGroup className='border border-success rounded-pill' size='sm'>
-                        <Button variant={media === 'movie' ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setMedia("movie")}>Movies</Button>
-                        <Button variant={media === 'tv' ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setMedia("tv")}>TV Series</Button>
-                        <Button variant={media === "person" ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setMedia("person")}>People</Button>
+                        <Button variant={media === 'movie' ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setMedia("movie")} style={{ fontSize: '12px' }}>Movies</Button>
+                        <Button variant={media === 'tv' ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setMedia("tv")} style={{ fontSize: '12px' }}>TV Series</Button>
+                        <Button variant={media === "person" ? 'success' : 'transparent'} className='rounded-pill text-light border-transparent' onClick={() => setMedia("person")} style={{ fontSize: '12px' }}>People</Button>
                     </ButtonGroup>
                 </Col>
             </Row>
