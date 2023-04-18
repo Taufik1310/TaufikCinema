@@ -3,6 +3,7 @@ import Index from "./pages/Index";
 import Detail from "./pages/Detail";
 import Search from "./pages/Search";
 import Discover from "./pages/Discover";
+import NotFound from "./components/Template/NotFound";
 import './App.css'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/tv/popular" element={<Discover title="Popular TV Series" media="tv" name="popular"/>}/>
         <Route path="/tv/top-rated" element={<Discover title="Popular TV Series" media="tv" name="popular"/>}/>
         <Route path="/people/popular" element={<Discover title="Popular People" media="person" name="popular"/>}/>
+        <Route path="*" element={<NotFound />}/>
       </Routes>
     </Router>
   )
