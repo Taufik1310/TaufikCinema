@@ -5,7 +5,7 @@ import Main from "./layouts/Main";
 
 const Index = lazy(() => import('./pages/Index'))
 const Detail = lazy(() => import('./pages/Detail'))
-const Search = lazy(() => import('./pages/Index'))
+const Search = lazy(() => import('./pages/Search'))
 const Discover = lazy(() => import('./pages/Discover'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
