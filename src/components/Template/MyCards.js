@@ -3,15 +3,14 @@ import MyCard from "./MyCard";
 
 const MyCards = ({ data, media }) => {
     const Cards = () => {
-        return data.map((item) => {
-            return (
+        return data.map((item) => (
                 <div 
                     style={{ minWidth: 150, maxWidth: 150, minHeight: 330 , maxHeight:400 }} 
                 >
                     <MyCard item={item} media={media} />
                 </div>
             )
-        })
+        )
     }
    
     return (

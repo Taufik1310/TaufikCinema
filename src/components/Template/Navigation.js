@@ -25,17 +25,18 @@ const Navigation = ({ display }) => {
                 <Image width={120} src={TMDBLogo} className="mt-2"/>
                 <Nav className="text-light py-5 fw-bold d-flex flex-column gap-3 w-100" style={{ fontSize: "16px" }}>
                     <Nav.Item>
-                        <Nav.Link href="/" className="d-flex align-items-center gap-3">
+                        <Nav.Link id="homeNav" href="/" className="d-flex align-items-center gap-3">
                             <HouseDoorFill size={24}/>Home
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href="/search" className="d-flex align-items-center gap-3">
+                        <Nav.Link id="searchNav" href="/search" className="d-flex align-items-center gap-3">
                             <Search size={24}/>Search
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link 
+                            id="movieMenu"
                             onClick={() => setIsOpened({movie: !isOpened.movie})}
                             aria-controls="movies-menu"
                             aria-expanded={isOpened.movie}
@@ -45,7 +46,8 @@ const Navigation = ({ display }) => {
                         </Nav.Link>
                         <Collapse in={isOpened.movie}>
                             <Nav id="movies-menu" className="flex-column ps-4 gap-3" style={{ fontSize: "14px" }}>
-                                <Nav.Link 
+                                <Nav.Link
+                                    id="moviePopularNav" 
                                     href="/movie/popular" 
                                     className={`text-${isHovered.popularMovie ? "light" : "secondary"}`} 
                                     onMouseEnter={() => setIsHovered({popularMovie: true})}
@@ -53,6 +55,7 @@ const Navigation = ({ display }) => {
                                 ><Fire className="me-2"/>Popular
                                 </Nav.Link>
                                 <Nav.Link 
+                                    id="movieTopRatedNav" 
                                     href="/movie/top-rated" 
                                     className={`text-${isHovered.topRatedMovie ? "light" : "secondary"}`} 
                                     onMouseEnter={() => setIsHovered({topRatedMovie: true})}
@@ -60,6 +63,7 @@ const Navigation = ({ display }) => {
                                     ><Stars className="me-2"/>Top Rated
                                 </Nav.Link>
                                 <Nav.Link 
+                                    id="movieNowPlayingNav" 
                                     href="/movie/now-playing"
                                     className={`text-${isHovered.nowPlaying ? "light" : "secondary"}`} 
                                     onMouseEnter={() => setIsHovered({nowPlaying: true})}
@@ -67,6 +71,7 @@ const Navigation = ({ display }) => {
                                     ><PlayFill className="me-2"/>Now Playing
                                 </Nav.Link>
                                 <Nav.Link 
+                                    id="movieUpcomingNav" 
                                     href="/movie/upcoming"
                                     className={`text-${isHovered.upcoming ? "light" : "secondary"}`} 
                                     onMouseEnter={() => setIsHovered({upcoming: true})}
@@ -78,6 +83,7 @@ const Navigation = ({ display }) => {
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link 
+                            id="tvMenu"
                             onClick={() => setIsOpened({tv: !isOpened.tv})}
                             aria-controls="tv-series-menu"
                             aria-expanded={isOpened.tv}
@@ -88,6 +94,7 @@ const Navigation = ({ display }) => {
                         <Collapse in={isOpened.tv}>
                             <Nav id="tv-series-menu" className="flex-column ps-4 gap-3 text-secondary" style={{ fontSize: "14px" }}>
                                 <Nav.Link 
+                                    id="tvPopularNav" 
                                     href="/tv/popular" 
                                     className={`text-${isHovered.popularTV ? "light" : "secondary"}`} 
                                     onMouseEnter={() => setIsHovered({popularTV: true})}
@@ -95,6 +102,7 @@ const Navigation = ({ display }) => {
                                     ><Fire className="me-2"/>Popular
                                 </Nav.Link>
                                 <Nav.Link 
+                                    id="tvTopRatedNav" 
                                     href="/tv/top-rated" 
                                     className={`text-${isHovered.topRatedTV ? "light" : "secondary"}`} 
                                     onMouseEnter={() => setIsHovered({topRatedTV: true})}
@@ -106,6 +114,7 @@ const Navigation = ({ display }) => {
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link 
+                            id="peopleMenu"
                             onClick={() => setIsOpened({people: !isOpened.people})}
                             aria-controls="people-menu"
                             aria-expanded={isOpened.people}
@@ -116,6 +125,7 @@ const Navigation = ({ display }) => {
                         <Collapse in={isOpened.people}>
                             <Nav id="people-menu" className="flex-column ps-4 gap-3 text-secondary" style={{ fontSize: "14px" }}>
                                 <Nav.Link 
+                                    id="peoplePopularNav" 
                                     href="/people/popular"
                                     className={`text-${isHovered.popularPeople ? "light" : "secondary"}`} 
                                     onMouseEnter={() => setIsHovered({popularPeople: true})}
